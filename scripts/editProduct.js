@@ -38,3 +38,16 @@ const removeEditedProduct = () => {
     saveProducts(products)
     location.assign("./index.html")
 }
+
+window.addEventListener("storage", (e) => {
+    if(e.key === "products"){
+        products = JSON.parse(e.newValue)
+        product = products.find(item => item.id === productId)
+        if(product===undefined){
+            location.assign("./index.html")
+        }
+        productTitle.value = product.title
+        productPrice.value = product.price
+        updatedTime.textContent = `Edited in: ${lastUpdated(product.updated)}`
+    }
+})

@@ -40,3 +40,11 @@ document.querySelector("#sortProduct").addEventListener("change", (e)=> {
     filters.sortBy = e.target.value
     renderProduct(products, filters)
 })
+
+window.addEventListener("storage", (e)=> {
+    if(e.key === "products"){
+        products = JSON.parse(e.newValue)
+        renderProduct(products,filters)
+        saveProducts(products)
+    }
+})
