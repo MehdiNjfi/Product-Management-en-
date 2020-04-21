@@ -32,3 +32,9 @@ productPrice.addEventListener("input", (e)=> {
 const backToHome = () => {
     location.assign('./index.html')
 }
+
+const removeEditedProduct = () => {
+    removeProduct(product.id)
+    saveProducts(products)
+    location.assign("./index.html")
+}
