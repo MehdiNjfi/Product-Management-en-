@@ -1,0 +1,24 @@
+{
+  "name": "productmanagement",
+  "version": "1.0.0",
+  "description": "Add and edit products...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahdinajafiz/Product-Management-en-.git"
+  },
+  "keywords": [
+    "productManagement",
+    "js",
+    "javaScript"
+  ],
+  "author": "Mahdi najafi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahdinajafiz/Product-Management-en-/issues"
+  },
+  "homepage": "https://github.com/mahdinajafiz/Product-Management-en-#readme"
+}
