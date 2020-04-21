@@ -7,18 +7,23 @@
 <body>
     <h1>Product Management</h1>
     <div id="container">
+        <!-- search input -->
         <input type="text" placeholder="search..." id="search">
+        <!-- sort products's select -->
         <select id="sortProduct">
             <option value="sortby">Sort By...</option>
             <option value="byCreated">Sort By Created</option>
             <option value="byUpdated">Sort By Updated</option>
         </select>
+        <!-- check box's Available Products -->
         <input type="checkbox" id="availableProducts"><label for="availableProducts">Available Products</label>
+        <!-- form for add products -->
         <form id="addProduct">
             <input type="text" placeholder="Product Name..." name="productTitle">
             <input type="text" placeholder="Product Price..." name="productPrice">
             <button id="addButton">Add</button>
         </form>
+        <!-- products table -->
         <div id="products">
                 <table>
                     <thead>
