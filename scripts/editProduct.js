@@ -1,8 +1,10 @@
+// get dom
 let productTitle = document.querySelector("#productTitle")
 let productPrice = document.querySelector("#productPrice")
 let updatedTime = document.querySelector("#updatedTime")
 updatedTime.setAttribute("style", "margin: 20px")
 
+// get product from local storage
 let productId = location.hash.substring(1)
 let products = getProducts()
 let product = products.find(item => item.id === productId)
@@ -11,6 +13,7 @@ if(product===undefined){
     location.assign("./index.html")
 }
 
+// Prepare products for change
 productTitle.value = product.title
 productPrice.value = product.price
 updatedTime.textContent = `Edited in: ${lastUpdated(product.updated)}`
@@ -29,16 +32,19 @@ productPrice.addEventListener("input", (e)=> {
     saveProducts(products)
 })
 
+// back to home btn
 const backToHome = () => {
     location.assign('./index.html')
 }
 
+// remove btn
 const removeEditedProduct = () => {
     removeProduct(product.id)
     saveProducts(products)
     location.assign("./index.html")
 }
 
+// multi-page synchronization 
 window.addEventListener("storage", (e) => {
     if(e.key === "products"){
         products = JSON.parse(e.newValue)
