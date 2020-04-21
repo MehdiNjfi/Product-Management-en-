@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+}
+h1 {
+    padding: 25px;
+    background-color: #0984e3;
+    color: #f5f6fa;
+}
+#container {
+    text-align: center;
+}
+input {
+    border: 1px solid #2f3640;
+    border-radius: 20px;
+    padding: 10px;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+}
+form {
+    margin: 10px;
+}
+#addButton {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: #4b7bec;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    color: #f5f6fa;
+    font-size: 16px;
+    outline: none;
+}
+#addButton:hover {
+    background-color: #3867d6;
+}
+table {
+    text-align: center;
+    margin: 0 auto;
+}
+th {
+    width: 200px;
+}
+td {
+    width: 200px;
+}
+a {
+    cursor: pointer;
+    color: #4b7bec;
+}
+#removeButton {
+    background-color: #f5f6fa;
+    color: #eb3b5a;
+    border: 1px solid #eb3b5a;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+}
+#removeButton:hover {
+    background-color: #eb3b5a;
+    color: #f5f6fa;
+}
+tfoot {
+    background-color: #4b7bec;
+    color: #f5f6fa;
+    border-radius: 10px;
+}
+#sum, .sum {
+    border-radius: 10px;
+    font-size: 18px;
+}
+@media only screen and (max-width: 660px) {
+    input[type="text"] {
+        display: block;
+        width: 400px;
+        margin-bottom: 10px;
+    }
+    input[id="search"]{
+        margin-right: 0;
+        margin-left: 10px;
+    }
+    #container {
+        text-align: center;
+    }
+    #removeButton {
+        display: block;
+    }
+}
+#sortProduct {
+    background-color: #0984e3;
+    color: #f5f6fa;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Nunito', sans-serif;;
+    font-size: 16px;
+    padding: 5px;
+}
