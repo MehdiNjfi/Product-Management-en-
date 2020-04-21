@@ -1,0 +1,14 @@
+#backToHome {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: #4b7bec;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    color: #f5f6fa;
+    font-size: 16px;
+    outline: none;
+}
+#backToHome:hover {
+    background-color: #3867d6;
+}
