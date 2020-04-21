@@ -30,3 +30,8 @@ document.querySelector("#search").addEventListener("input", (e) => {
     renderProduct(products, filters)
     saveProducts(products)
 })
+
+document.querySelector("#availableProducts").addEventListener("change", (e) => {
+    filters.availableProduct =e.target.checked
+    renderProduct(products, filters)
+})
