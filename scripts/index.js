@@ -1,9 +1,10 @@
 let products = getProducts()
 
 let filters = {
-    searchItems: ""
+    searchItems: "",
+    sortBy: "",
+    availableProduct: false
 }
-
 let sumPrices = 0
 showSum()
 renderProduct(products, filters)

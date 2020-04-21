@@ -9,6 +9,15 @@ const getProducts = () => {
 
 const saveProducts = (products) => localStorage.setItem("products", JSON.stringify(products))
 
+const removeProduct = (id) => {
+    let productIndex = products.findIndex(item => {
+        return item.id === id
+    })
+    if(productIndex > -1){
+        products.splice(productIndex, 1)
+    }
+}
+
 let showSum = () => {
     sumPrices = 0
     products.forEach(element => {
