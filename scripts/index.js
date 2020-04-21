@@ -35,3 +35,8 @@ document.querySelector("#availableProducts").addEventListener("change", (e) => {
     filters.availableProduct =e.target.checked
     renderProduct(products, filters)
 })
+
+document.querySelector("#sortProduct").addEventListener("change", (e)=> {
+    filters.sortBy = e.target.value
+    renderProduct(products, filters)
+})
