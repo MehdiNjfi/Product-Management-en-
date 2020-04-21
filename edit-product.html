@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Product</title>
+    <link href="./styles/style.css" rel="stylesheet" type="text/css">
+    <link href="./styles/editProduct.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>Edit Product</h1>
+    <div id="container">
+        <input type="text" placeholder="Product title" id="productTitle">
+        <input type="text" placeholder="Product price" id="productPrice">
+        <button id="backToHome" onclick="backToHome()">Back To Home</button>
+        <div id="updatedTime">
+        </div>
+        <button id="removeButton" onclick="removeEditedProduct()">remove</button>
+    </div>
+    <script src="./scripts/moment.js"></script>
+    <script src="./scripts/functions.js"></script>
+    <script src="./scripts/editProduct.js"></script>
+</body>
+</html>
