@@ -3,6 +3,7 @@ body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
 }
+/* product management h1 */
 h1 {
     padding: 25px;
     background-color: #0984e3;
@@ -11,6 +12,8 @@ h1 {
 #container {
     text-align: center;
 }
+
+/* all input in page */
 input {
     border: 1px solid #2f3640;
     border-radius: 20px;
@@ -22,6 +25,9 @@ input {
 form {
     margin: 10px;
 }
+
+/* buttons styles */
+/* add button show in index.html */
 #addButton {
     padding: 10px;
     border: 1px solid #ffffff;
@@ -36,20 +42,8 @@ form {
 #addButton:hover {
     background-color: #3867d6;
 }
-table {
-    text-align: center;
-    margin: 0 auto;
-}
-th {
-    width: 200px;
-}
-td {
-    width: 200px;
-}
-a {
-    cursor: pointer;
-    color: #4b7bec;
-}
+
+/* remove buttons show in index.html & editPro */
 #removeButton {
     background-color: #ffffff;
     color: #eb3b5a;
@@ -65,6 +59,22 @@ a {
     background-color: #eb3b5a;
     color: #f5f6fa;
 }
+
+/* products's table */
+table {
+    text-align: center;
+    margin: 0 auto;
+}
+th {
+    width: 200px;
+}
+td {
+    width: 200px;
+}
+a {
+    cursor: pointer;
+    color: #4b7bec;
+}
 tfoot {
     background-color: #4b7bec;
     color: #f5f6fa;
@@ -73,6 +83,17 @@ tfoot {
 #sum, .sum {
     border-radius: 10px;
     font-size: 18px;
+}
+/* sort products select */
+#sortProduct {
+    background-color: #ffffff;
+    color: #2f3640;
+    border-radius: 10px;
+    border: 1px solid #2f3640;
+    outline: none;
+    font-family: 'Nunito', sans-serif;;
+    font-size: 16px;
+    padding: 5px;
 }
 @media only screen and (max-width: 660px) {
     input[type="text"] {
@@ -90,14 +111,4 @@ tfoot {
     #removeButton {
         display: block;
     }
-}
-#sortProduct {
-    background-color: #ffffff;
-    color: #2f3640;
-    border-radius: 10px;
-    border: 1px solid #2f3640;
-    outline: none;
-    font-family: 'Nunito', sans-serif;;
-    font-size: 16px;
-    padding: 5px;
 }
