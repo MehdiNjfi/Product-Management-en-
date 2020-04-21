@@ -28,3 +28,7 @@ productPrice.addEventListener("input", (e)=> {
     updatedTime.textContent = `Edited in: ${lastUpdated(product.updated)}`
     saveProducts(products)
 })
+
+const backToHome = () => {
+    location.assign('./index.html')
+}
