@@ -24,3 +24,9 @@ document.querySelector("#addProduct").addEventListener("submit", (e) => {
     e.target.elements.productTitle.value = ''
     e.target.elements.productPrice.value = ''
 })
+
+document.querySelector("#search").addEventListener("input", (e) => {
+    filters.searchItems = e.target.value
+    renderProduct(products, filters)
+    saveProducts(products)
+})
