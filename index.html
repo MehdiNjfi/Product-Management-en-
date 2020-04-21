@@ -5,6 +5,45 @@
     <link href="./styles/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    
+    <h1>Product Management</h1>
+    <div id="container">
+        <input type="text" placeholder="search..." id="search">
+        <select id="sortProduct">
+            <option value="sortby">Sort By...</option>
+            <option value="byCreated">Sort By Created</option>
+            <option value="byUpdated">Sort By Updated</option>
+        </select>
+        <input type="checkbox" id="availableProducts"><label for="availableProducts">Available Products</label>
+        <form id="addProduct">
+            <input type="text" placeholder="Product Name..." name="productTitle">
+            <input type="text" placeholder="Product Price..." name="productPrice">
+            <button id="addButton">Add</button>
+        </form>
+        <div id="products">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>available</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Created</th>
+                            <th>Updated</th>
+                            <th>remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" class="sum">Sum</td>
+                            <td colspan="3" id="sum"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+        </div>
+    </div>
+    <script src="./scripts/functions.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 </html>
