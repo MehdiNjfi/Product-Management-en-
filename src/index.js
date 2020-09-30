@@ -1,3 +1,4 @@
+import {getProducts,saveProducts, renderProduct} from './functions'
 // products's array get products from local storage
 let products = getProducts()
 
@@ -8,9 +9,6 @@ let filters = {
     availableProduct: false
 }
 
-// sum prodicts's price
-let sumPrices = 0
-showSum()
 
 // render products 
 renderProduct(products, filters)

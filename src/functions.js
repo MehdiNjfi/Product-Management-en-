@@ -1,5 +1,5 @@
 //get products from local storage
-const getProducts = () => {
+export const getProducts = () => {
     let productJson = localStorage.getItem("products")
     try {
         return productJson !== null ? JSON.parse(productJson) : []
@@ -9,7 +9,7 @@ const getProducts = () => {
 }
 
 //save products in local storage
-const saveProducts = (products) => localStorage.setItem("products", JSON.stringify(products))
+export const saveProducts = (products) => localStorage.setItem("products", JSON.stringify(products))
 
 //remove product button 
 const removeProduct = (id) => {
@@ -19,15 +19,6 @@ const removeProduct = (id) => {
     if(productIndex > -1){
         products.splice(productIndex, 1)
     }
-}
-
-//sum products's price
-let showSum = () => {
-    sumPrices = 0
-    products.forEach(element => {
-        sumPrices+=element.price
-    });
-    document.querySelector("#sum").innerHTML = `$${sumPrices}`
 }
 
 //sort products
@@ -56,7 +47,7 @@ let sortProduct = (products, sortBy) => {
 }
 
 //last updated 
-let lastUpdated = (time) => {
+export const lastUpdated = (time) => {
     return moment(time).fromNow()
 }
 
@@ -127,7 +118,7 @@ const createElement = (product) => {
 }
 
 //render products with filters(search, available product, sort products)
-const renderProduct = (products, filters) => {
+export const renderProduct = (products, filters) => {
     sortProduct(products, filters.sortBy)
     let filtered = products.filter(item => item.title.toLowerCase().includes(filters.searchItems.toLowerCase()))
     let a = document.querySelectorAll(".product")
@@ -144,5 +135,4 @@ const renderProduct = (products, filters) => {
     filtered.forEach(item => {
         document.querySelector("tbody").appendChild(createElement(item))
     })
-    showSum()
 }

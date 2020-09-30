@@ -4,7 +4,7 @@
   "description": "Add and edit products...",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/mahdinajafiz/Product-Management-en-/issues"
   },
-  "homepage": "https://github.com/mahdinajafiz/Product-Management-en-#readme"
+  "homepage": "https://github.com/mahdinajafiz/Product-Management-en-#readme",
+  "dependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
 }
