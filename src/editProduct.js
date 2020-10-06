@@ -3,6 +3,7 @@ import {getProducts,saveProducts, lastUpdated} from './functions.js'
 let productTitle = document.querySelector("#productTitle")
 let productPrice = document.querySelector("#productPrice")
 let updatedTime = document.querySelector("#updatedTime")
+let backToHomeBtn = document.querySelector("#backToHome")
 updatedTime.setAttribute("style", "margin: 20px")
 
 // get product from local storage
@@ -37,6 +38,7 @@ productPrice.addEventListener("input", (e)=> {
 const backToHome = () => {
     location.assign('./index.html')
 }
+backToHomeBtn.addEventListener('click', backToHome)
 
 // remove btn
 const removeEditedProduct = () => {
