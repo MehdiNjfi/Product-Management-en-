@@ -1,4 +1,4 @@
-import {getProducts,saveProducts, renderProduct} from './functions'
+import {getProducts,saveProducts, renderProduct} from './functions.js'
 // products's array get products from local storage
 let products = getProducts()
 

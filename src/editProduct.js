@@ -1,4 +1,4 @@
-import {getProducts,saveProducts, lastUpdated} from './functions'
+import {getProducts,saveProducts, lastUpdated} from './functions.js'
 // get dom
 let productTitle = document.querySelector("#productTitle")
 let productPrice = document.querySelector("#productPrice")
