@@ -1,3 +1,10 @@
+// filters for search input & sort prosucts and availableProduct checkbox
+export let filters = {
+  searchItems: "",
+  sortBy: "",
+  availableProduct: false
+}
+
 //get products from local storage
 export const getProducts = () => {
     let productJson = localStorage.getItem("products")
@@ -12,7 +19,7 @@ export const getProducts = () => {
 export const saveProducts = (products) => localStorage.setItem("products", JSON.stringify(products))
 
 //remove product button 
-const removeProduct = (id) => {
+const removeProduct = (id, products) => {
     let productIndex = products.findIndex(item => {
         return item.id === id
     })
@@ -52,7 +59,7 @@ export const lastUpdated = (time) => {
 }
 
 //craete products table
-const createElement = (product) => {
+const createElement = (product, products) => {
     let trProduct = document.createElement("tr")
     trProduct.setAttribute("id", product.id)
     trProduct.setAttribute("class", "product")
@@ -73,6 +80,9 @@ const createElement = (product) => {
     inputCheckbox.setAttribute("type", "checkbox")
     inputCheckbox.setAttribute("id", product.id.slice(0, 4))
     labelCheckbox.setAttribute("for", product.id.slice(0, 4))
+    // Set the status of the checkbox
+    product.exist ? inputCheckbox.checked = false : inputCheckbox.checked = true
+    
     inputCheckbox.addEventListener("change", (e) => {
         if(e.target.checked){
             product.exist = false
@@ -102,7 +112,7 @@ const createElement = (product) => {
     removeButton.textContent = "remove"
     removeButton.setAttribute("id", "removeButton")
     removeButton.addEventListener("click", () => {
-        removeProduct(product.id)
+        removeProduct(product.id, products)
         saveProducts(products)
         renderProduct(products,filters)
     })
@@ -133,6 +143,6 @@ export const renderProduct = (products, filters) => {
         }
     })
     filtered.forEach(item => {
-        document.querySelector("tbody").appendChild(createElement(item))
+        document.querySelector("tbody").appendChild(createElement(item, products))
     })
 }

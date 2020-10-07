@@ -1,14 +1,6 @@
-import {getProducts,saveProducts, renderProduct} from './functions.js'
+import {getProducts,saveProducts, renderProduct, filters} from './functions.js'
 // products's array get products from local storage
 let products = getProducts()
-
-// filters for search input & sort prosucts and availableProduct checkbox
-let filters = {
-    searchItems: "",
-    sortBy: "",
-    availableProduct: false
-}
-
 
 // render products 
 renderProduct(products, filters)
