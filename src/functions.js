@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 // filters for search input & sort prosucts and availableProduct checkbox
 export let filters = {
   searchItems: "",

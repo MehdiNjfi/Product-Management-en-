@@ -1,25 +1,24 @@
 const path = require("path");
 
 module.exports = {
+  mode: 'development',
   resolve: {
     extensions: ['.js'],
   },
   entry: {
-    index: "./src/index.js",
-    editProduct: "./src/editProduct.js"
+    index: './src/index.js',
+    editProduct: './src/editProduct.js'
   },
   output: {
-    path: path.resolve(__dirname, "build/static/js"),
+    path: path.resolve(__dirname, "public/static/js"),
     filename: "[name].js",
   },
-  devtool: 'inline-source-map',
   devServer: {
-    contentBase: './',
-    publicPath: './public/',
-    open: true, 
-    hot: true,
-    openPage: './public/index.html',
-    port: 3000,
+    contentBase: path.resolve(__dirname),
+    publicPath: '/public/static/js/',
+    open: true,
+    openPage: 'public/',
+    port: 3000
   },
   module: {
     rules: [

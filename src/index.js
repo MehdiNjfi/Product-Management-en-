@@ -1,4 +1,6 @@
+import moment from 'moment'
 import {getProducts,saveProducts, renderProduct, filters} from './functions.js'
+
 // products's array get products from local storage
 let products = getProducts()
 

@@ -1,4 +1,6 @@
+import moment from 'moment'
 import {getProducts,saveProducts, lastUpdated} from './functions.js'
+
 // get dom
 let productTitle = document.querySelector("#productTitle")
 let productPrice = document.querySelector("#productPrice")
