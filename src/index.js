@@ -1,4 +1,5 @@
 import moment from 'moment'
+import { v4 as uuidv4 } from 'uuid';
 import {getProducts,saveProducts, renderProduct, filters} from './functions.js'
 
 // products's array get products from local storage
