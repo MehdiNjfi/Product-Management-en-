@@ -17,6 +17,11 @@ export const getProducts = () => {
     }
 }
 
+let showTotalPrice = (products) => {
+  const totalPrice  = products.reduce((total, product) => total + product.price, 0)
+  return totalPrice
+}
+
 //save products in local storage
 export const saveProducts = (products) => localStorage.setItem("products", JSON.stringify(products))
 
@@ -147,4 +152,5 @@ export const renderProduct = (products, filters) => {
     filtered.forEach(item => {
         document.querySelector("tbody").appendChild(createElement(item, products))
     })
+    document.querySelector("#totalPrice").innerHTML = `$${showTotalPrice(filtered)}`
 }

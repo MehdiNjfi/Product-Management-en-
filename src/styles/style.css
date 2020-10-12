@@ -70,18 +70,14 @@ th {
 }
 td {
     width: 200px;
+    padding: 0.5em 0;
 }
 a {
     cursor: pointer;
     color: #4b7bec;
 }
-tfoot {
-    background-color: #4b7bec;
-    color: #f5f6fa;
-    border-radius: 10px;
-}
-#sum, .sum {
-    border-radius: 10px;
+tfoot tr td{
+    border-top:3px solid #0984e3;
     font-size: 18px;
 }
 /* sort products select */
